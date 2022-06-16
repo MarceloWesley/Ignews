@@ -7,8 +7,8 @@ export const endpoint = sm.apiEndpoint
 export const repositoryName  = prismic.getRepositoryName(endpoint)
 
 export interface PrismicConfig {
-  req?: HttpRequestLike;
-  previewData?: {} 
+  req?: HttpRequestLike | unknown;
+  previewData: {} 
 }
 
 export function linkResolver(doc) {
