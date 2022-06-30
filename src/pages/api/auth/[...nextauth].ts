@@ -15,7 +15,7 @@ export default NextAuth({
       },
     }),
   ],
-  secret: "hellow",
+  secret: "DqamcE4QWafH26eEJThsJEkTshvVnmKf28RxbQggMXU=",
   callbacks: {
     async session({session}){
       try{
