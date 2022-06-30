@@ -15,7 +15,7 @@ export default NextAuth({
       },
     }),
   ],
-  secret: "GQJOgWscGG8B8O/7PIPHDd+vJsiXKILdqhxaMfxik50=",
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async session({session}){
       try{
@@ -57,7 +57,7 @@ export default NextAuth({
 
     async signIn({ user, account, profile }) {
       const { email } = user;
-
+      
       try {
         await fauna.query(
           q.If(
