@@ -15,7 +15,7 @@ export default NextAuth({
       },
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: "hellow",
   callbacks: {
     async session({session}){
       try{
